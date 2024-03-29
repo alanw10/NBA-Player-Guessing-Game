@@ -125,6 +125,21 @@
         #toggle_correct_player:hover {
             background-color: #e0a800;
         }
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
     </style>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     
@@ -147,6 +162,10 @@
 <body>
     <h1>NBA Player Guessing Game</h1>
     <button id="toggle_correct_player">Reveal Correct Player</button>
+        <p>You have 8 guesses </p>
+        <p>Green is an exact match</p>
+        <p>Yellow in age, height, or jersery number means the guess is within two </p>
+        <p>Yellow in position means that the correct player plays atleast one of the positions in the guess</p>
 
     <div id="correct_player">
         <p><strong>Correct Player: </strong>{{ random_player_info[0] }}</p>
@@ -193,6 +212,8 @@
         
     </div>
     {% endif %}
-    
+    <footer>
+        <a href="https://github.com/alanw10/NBA-Player-Guessing-Game" target="_blank">GitHub</a>
+    </footer>
 </body>
 </html>
